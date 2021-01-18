@@ -1,0 +1,27 @@
+<div class="container" [style.max-width]="maxWidth">
+  <div class="row">
+    <div class="app-logo">
+      <img src="assets/gridster-logo.png" alt="Gridster Logo">
+    </div>
+  </div>
+  <div class="row generator-form-wrapper">
+    <app-square-generator
+      (boardSizeEmitter)="updateBoardWidth($event)">
+    </app-square-generator>
+  </div>
+  <div class="row">
+    <div class="column" *ngFor="let column of columns; let i = index;">
+      <ng-container *ngFor="let row of rows; let j = index;">
+        <app-square
+          [columnIndex]="i"
+          [rowIndex]="j"
+          [obstacles]="obstacles"
+          [matrix]="matrix"
+          [board]="board">
+        </app-square>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+

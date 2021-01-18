@@ -1,0 +1,8 @@
+<ng-container *ngLet="(this.board[rowIndex][columnIndex].status) as squareStatus">
+  <button
+    (click)="onClick(squareStatus)"
+    [className]="'square-' + squareStatus"
+    [style.width]="squareSize"
+    [style.height]="squareSize">
+  </button>
+</ng-container>

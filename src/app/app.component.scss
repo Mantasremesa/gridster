@@ -1,0 +1,24 @@
+:host {
+  .container {
+    font-size: 14px;
+    line-height: 1;
+
+    .app-logo {
+      img {
+        width: 244px;
+      }
+    }
+
+    .generator-form-wrapper {
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      padding: 12px 34px 18px;
+      margin-top: 40px;
+      margin-bottom: 28px;
+    }
+
+    .column {
+      display: grid;
+    }
+  }
+}

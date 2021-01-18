@@ -1,0 +1,41 @@
+<form [formGroup]="generatorForm">
+  <div class="form-row align-items-end">
+    <div class="input-block col">
+      <label for="rowsInput">Rows</label>
+      <input
+        formControlName="rowsInput"
+        [ngClass]="{'is-invalid':generatorForm.get('rowsInput').touched && generatorForm.get('rowsInput').invalid}"
+        required
+        type="number"
+        class="form-control"
+        id="rowsInput"
+        [(ngModel)]="rowsInput"
+        name="rowsInput">
+    </div>
+    <div class="multiplier-symbol">x</div>
+    <div class="input-block col">
+      <label for="columnsInput">Columns</label>
+      <input
+        formControlName="columnsInput"
+        [ngClass]="{'is-invalid':generatorForm.get('columnsInput').touched && generatorForm.get('columnsInput').invalid}"
+        required
+        type="number"
+        class="form-control"
+        id="columnsInput"
+        [(ngModel)]="columnsInput"
+        name="columnsInput">
+    </div>
+    <div class="col ml-3">
+      <button
+        class="btn btn-primary"
+        [disabled]="generatorForm.invalid"
+        (click)="drawBoard(rowsInput, columnsInput)">
+        Generate
+      </button>
+    </div>
+  </div>
+</form>
+<br>
+<div class="alert alert-danger" role="alert" *ngIf="generatorForm.invalid">
+  {{errorMessage}}
+</div>

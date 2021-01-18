@@ -1,0 +1,43 @@
+:host {
+  button {
+    border: 1px solid #dedede;
+    box-shadow: none;
+    outline: none !important;
+
+    &.square-start {
+      background-color: #7ed321;
+    }
+
+    &.square-end {
+      background-color: #639530;
+    }
+
+    &.square-path {
+      background-color: #f5a623;
+    }
+
+    &.square-fill {
+      background-color: #f1f1f1;
+
+      &:hover {
+        background-color: #f8f8f8;
+      }
+
+      &:active {
+        background-color: #e2e2e2;
+      }
+    }
+
+    &.square-clear {
+      background-color: #ffffff;
+
+      &:hover {
+        background-color: #f8f8f8;
+      }
+
+      &:active {
+        background-color: #e2e2e2;
+      }
+    }
+  }
+}
